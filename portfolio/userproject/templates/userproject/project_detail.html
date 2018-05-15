@@ -1,0 +1,10 @@
+{% extends "mainpage/header.html" %}
+
+{% block content %}
+	<h2>{{project.ProjectTitle}}</h2>
+	<h6>Posted on: {{project.date}}</h6>
+	<h6>Duration of commit: {{project.CommitDuration}}</h6>
+	<h6>Undertaken: {{project.IsUndertaken}}</h6>
+	<h6>Comment : {{project.Comments|safe|linebreaks}}</h6>
+	<br>
+{% endblock %}

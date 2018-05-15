@@ -1,0 +1,10 @@
+{% extends "mainpage/header.html" %}
+
+{% block content %}
+	<h2>{{post.title}}</h2>
+	<h6>posted on: {{post.date}}</h6>
+	<h6>Fund sentiment: {{post.fundsent}}</h6>
+	<h6>Percentage change in fund: {{post.perc_change|safe}}</h6>
+	<br>
+	{{post.desc|safe|linebreaks}}
+{% endblock %}

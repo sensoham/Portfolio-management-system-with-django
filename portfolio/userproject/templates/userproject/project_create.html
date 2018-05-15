@@ -1,0 +1,13 @@
+{% extends "mainpage/header.html" %}
+
+{% block content %}
+	<div class="create-project">
+		<h6>Please enter your commitment specifics here.</h6>
+		<form class="site-form" action="{% url 'projects:create' %}" method="post">
+			{% csrf_token %}
+			{{form}}
+			<input type="submit" value="Create">
+		</form>
+	</div>
+
+{% endblock %}

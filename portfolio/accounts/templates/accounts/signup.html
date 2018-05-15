@@ -1,0 +1,12 @@
+{% extends "mainpage/header.html" %}
+
+{% block content %}
+	<div class="container">
+		<h2>SignUp</h2>
+		<form class="site-form" action="/accounts/signup/" method="post">
+		{% csrf_token %}
+		{{ form }}
+		<input type="submit" name="" value="Signup">
+		</form>
+	</div>
+{% endblock %}

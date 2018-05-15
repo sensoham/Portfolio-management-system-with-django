@@ -1,0 +1,7 @@
+{% extends "mainpage/header.html" %}
+
+{% block content %}
+	{% for proj in projects %}
+		<h5>{{ proj.date|date:"Y-m-d" }}: <a href="/userproj/{{proj.id}}">{{ proj.id }}</a></h5>
+	{% endfor %}
+{% endblock %}
